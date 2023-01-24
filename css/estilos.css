@@ -1,0 +1,109 @@
+
+:root {
+    --colorCuerpo: #dfe3ee;
+    --colorIconos: #8b9dc3;
+    --fontsIconos: 'Montserrat' 200, sans-serif;
+    --bordesIconos: solid 2px;
+    --radioIconos:  10px;
+    --textoIconos: blue;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorCuerpo);
+    width: 100%;
+    position: center;
+}
+
+.nombre{
+    width: 100%;
+    height: 200px;
+    background:#8b9dc3;
+}
+
+.nombre .parrafos{
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 8%;
+}
+
+.nombre .imagen{
+  position: absolute;  
+  top: 1%;
+  right: 8%;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  overflow: hidden;
+
+}
+
+.nombre .imagen Img{
+    width: 180px;
+    height: 200px;
+}
+
+.nombre .parrafos .p1{
+    color: var(--textoIconos);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.d1{
+    border: var(--bordesIconos);
+    border-radius: var(--radioIconos);
+    background-color: var(--colorIconos);
+    font-family: var(--fontsIconos);
+    padding: 5px;
+    margin: auto;
+    color: var(--textoIconos);
+    
+}
+
+.cambio{
+    /**display: inline-block;*/
+    background-color: var(--colorIconos); 
+    font-family: var(--fontsIconos);
+    cursor: pointer;
+    border: var(--bordesIconos);
+    border-radius: var(--radioIconos);
+    color: var(--textoIconos);
+    margin-left: 80%;
+   
+}
+
+.cambio:hover {
+    background-color: white;
+}
+
+.boton{
+    display: inline-block;
+    border: var(--bordesIconos);
+    border-radius: var(--radioIconos);
+    font-family: var(--fontsIconos);
+    background-color: var(--colorIconos);
+    padding: 3px;
+    color: var(--textoIconos);
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: white;
+}
+
+.datos .btn{
+    background-color: var(--colorIconos); 
+    font-family: var(--fontsIconos);
+    cursor: pointer;
+    border: var(--bordesIconos);
+    border-radius: var(--radioIconos);
+    color: var(--textoIconos);
+}
+
+.datos .btn:hover {
+    background-color: white;
+}
+ 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Curriculum Vitae</title>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">                           <!--link normalizacion para los distintos formatos de pantalla-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&diplay=swap" rel="stylesheet">        <!--Link estilos de letras google-->
+</head>
+<body>
+    <script src="js/cambioCuerpo.js"></script>
+
+    <div class="nombre">
+        <div class="imagen">
+         <img src="https://www.modelocurriculum.net/wp-content/foto-curriculum-vitae-hombre.jpg" alt="">  <!--Link foto presentacion no real-->
+        </div>
+        <div class="parrafos"> 
+            <p class="p1">Nombre: Joaquín V. González</p>                                 <!--No son reales-->
+            <p class="p1">Dirección: Las Hortensias 558, CABA</p>
+            <P class="p1">Celular: 11 5674-4355</P>
+        </div>
+    </div>
+    <br>
+    <div class="datos">
+        <fieldset>
+            <legend class="d1">Datos Generales</legend>
+            <ul>
+                <li>Fecha de Nacimiento: 23/06/1986</li>                                   <!--No son reales-->
+                <li>DNI: 32.675.421</li>
+                <li>Nacionalidad: Argentino</li>
+                <li>E-mail: loboblanco33@gmail.com</li>
+                <li>Idiomas: Inglés</li>
+            </ul>
+        </fieldset>
+    </div>
+    <br>
+    <div class="datos">
+        <fieldset>
+            <legend class="d1">Estudios Académicos</legend>
+            <ul>
+                <li>Bachiller _ Nuestra Sra. de la Concepción, Buenos Aires</li>            <!--No son reales-->
+                <li>Analista de Sistema _ Enet Nº 32, Buenos Aires</li>
+                <li>Cursos _ HTML, JavaScrip, CSS, Ruby</li>
+            </ul>
+        </fieldset>
+    </div>
+    <br>
+    <div class="datos">
+        <fieldset>
+            <legend class="d1">Experencia Laboral</legend>
+            <ul>
+                <li>Ayudante, Estudio NET Publicaciones Buenos Aires</li>                    <!--No son reales-->
+            </ul>
+        </fieldset>
+    </div>
+    <br>
+    <div class="datos">
+        <fieldset>
+            <legend class="d1">Pasatiempo</legend>
+
+              <a class= boton href="https://www.youtube.com/watch?v=oR_e9y-bka0" 
+              target="_blank"> Pelicula 1
+              </a>                                                                            <!--Link trailer youtube-->
+              <a class= boton href="https://www.youtube.com/watch?v=38A__WT3-o0"
+              target="_blank"> Pelicula 2
+              </a>
+
+              <a class= boton href="https://www.argentina.gob.ar/sites/default/files/hernandez_jose_-_el_gaucho_martin_fierro.pdf"
+              target="_blank"> Libro 1
+              </a>                                                                                                                   <!--Link libros PDF-->
+              <a class= boton href="https://www.academia.edu/19673007/El_Lenguaje_de_Programaci%C3%B3n_C_Kernighan_y_Ritchie_Pearson"
+              target="_blank"> Libro 2
+              </a>
+              <button class="cambio" onclick="cambioFondo()">Cambiar Fondo Color CV</button>
+        </fieldset>
+    </div>
+    <br>
+    <div class="datos">
+        <fieldset>
+            <legend class="d1">Contacto</legend>                                                 <!--Este no es un correo real no esta validado en formsubmit-->
+                <form action="https://formsubmit.co/loboblanco33@gmail.com" method="POST">       <!--Las pruebas las realice con mi correo real y funciona-->   
+                                                                                                 
+                   <input type="text" name="name" placeholder="Nombre y Apellido" required>
+                   <input type="email" name="email" placeholder="Correo Electronico" required>
+                   <input type="text" name="message" placeholder="Asunto" required>
+                   <input type="hidden" name="_subject" value="Nuevo mensaje de mi curriculum">
+                   <button class="btn" type="submit">Enviar</button>
+                 
+                </form>
+        </fieldset>
+    </div>
+</body>
+</html>
