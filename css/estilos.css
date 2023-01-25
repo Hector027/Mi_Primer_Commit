@@ -1,12 +1,12 @@
 
 :root {
-    --colorCuerpo: #dfe3ee;
+    --colorCuerpo: #CAD6E7;
     --colorIconos: #8b9dc3;
     --fontsIconos: 'Montserrat' 200, sans-serif;
     --bordesIconos: solid 2px;
     --radioIconos:  10px;
     --textoIconos: blue;
-}
+}                                                   
 
 body{
     margin: 0;
@@ -61,6 +61,10 @@ body{
     margin: auto;
     color: var(--textoIconos);
     
+}
+
+.d2{
+    color: var(--textoIconos);
 }
 
 .cambio{
