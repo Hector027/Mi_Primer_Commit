@@ -11,6 +11,5 @@ if(style.getPropertyValue('--colorCuerpo') === '#07D6F3') {
     style.setProperty('--colorCuerpo', '#07D6F3');
 
 }
-
 }
    

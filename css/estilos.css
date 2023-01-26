@@ -6,6 +6,7 @@
     --bordesIconos: solid 2px;
     --radioIconos:  10px;
     --textoIconos: blue;
+    --cambioColorPuntero: white;
 }                                                   
 
 body{
@@ -30,14 +31,13 @@ body{
 }
 
 .nombre .imagen{
-  position: absolute;  
-  top: 1%;
-  right: 8%;
-  width: 180px;
-  height: 180px;
-  border-radius: 100%;
-  overflow: hidden;
-
+    position: absolute;  
+    top: 1%;
+    right: 8%;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 .nombre .imagen Img{
@@ -60,7 +60,6 @@ body{
     padding: 5px;
     margin: auto;
     color: var(--textoIconos);
-    
 }
 
 .d2{
@@ -68,7 +67,6 @@ body{
 }
 
 .cambio{
-    /**display: inline-block;*/
     background-color: var(--colorIconos); 
     font-family: var(--fontsIconos);
     cursor: pointer;
@@ -76,11 +74,10 @@ body{
     border-radius: var(--radioIconos);
     color: var(--textoIconos);
     margin-left: 80%;
-   
 }
 
 .cambio:hover {
-    background-color: white;
+    background-color: var(--cambioColorPuntero);
 }
 
 .boton{
@@ -95,7 +92,7 @@ body{
 }
 
 .boton:hover {
-    background-color: white;
+    background-color: var(--cambioColorPuntero);
 }
 
 .datos .btn{
@@ -108,6 +105,6 @@ body{
 }
 
 .datos .btn:hover {
-    background-color: white;
+    background-color: var(--cambioColorPuntero);
 }
  
