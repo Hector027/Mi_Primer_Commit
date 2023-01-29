@@ -1,0 +1,88 @@
+
+html{
+    background: #c0c0c0;
+}
+
+body{
+    margin-top: 15px;
+    height: 750px;
+    width: 750px;
+    background: #dda235;
+    margin: auto;
+}
+
+header{
+    height: 250px;
+    width: 750px;
+    background: #da5656;
+}
+
+#foto{
+    width: 500px;
+    height: 250px;
+    background: #000000;
+    float: right;
+}
+
+#nombre{
+    width: 250px;
+    height: 125px;
+    background: #13dacb;
+}
+
+#contacto{
+    width: 250px;
+    height: 125px;
+    background: #40da13;
+}
+
+nav{
+    height: 50px;
+    background: #5063a3;
+}
+
+nav ul{
+    list-style: none;        /* quitar los puntos en la lista ul */
+}
+
+nav a{
+    color: #c0c0c0;        /* dar color texto lista ul */
+    text-decoration: none;   /* quitar linea debajo texto lista ul */
+    padding: 15px;           /* espaciar texto lista ul */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    /* cambiar fuente tipo letras texto ul*/
+}
+
+nav ul li{
+    float: left;              /* colocar todo el texto ul horizontal */
+}
+
+main{
+    height: 400px;
+    background: #ce2be4;
+}
+
+#margenIzquierdo{
+    height: 400px;
+    width: 150px;
+    background: #ede313;
+    float: left;
+}
+
+article{
+    width: 500px;
+    height: 400px;
+    background: #f48a0c;
+    float: left;
+}
+
+#margenDerecho{
+    height: 400px;
+    width: 100px;
+    background: #ede313;
+    float: right;
+}
+
+footer{
+    height: 50px;
+    background: #5a5a43;
+}
