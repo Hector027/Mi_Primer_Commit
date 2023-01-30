@@ -1,6 +1,11 @@
 
+*{                    /* selector universal */
+    margin: 0;
+    padding: 0;       /* eliminar todos los espacios por defectos que vienen en las etiquetas */
+}
+
 html{
-    background: #c0c0c0;
+    background-color: #c0c0c0;
 }
 
 body{
