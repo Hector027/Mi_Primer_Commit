@@ -1,0 +1,98 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;                                    /* para que ocupe el 100% de nuestra pagina HTML */
+}
+
+body {
+font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    min-height: 100%;                                /* para estirar todos los elemtos y ocupen el 100% de la pagina */
+}
+
+.grid-container > * {                                /* padre, para darle estilos a todos los descendientes de grid-container */
+    box-shadow: -1px 1px 7px 0px #000000;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;                               /* aca definimos que area queremos que ocupe el header */
+    background-color: #85aedd;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #afd6af;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fdcfcf;
+}
+
+.main {
+    grid-area: main;
+    background-color: #f5f5f5;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #8c96a0;
+}
+
+.grid-container {                            /* diseño para celular, las areas una debajo de otra con media query (consulta de medios)*/
+    display: grid;                           /* para que cada uno de los elementos de grid-container se convierta en grid */
+    gap: 20px;                               /* separacion entre los elementos */
+    background-color: #000000;
+    grid-template-areas:                     /* definir distintas areas que va a contener nuestro grid */
+    "header"
+    "navbar"
+    "main"                                   /* con esta plantilla podemos posicionar cualquier elemento de la lista en cualquier orden */
+    "sidebar"
+    "footer";
+}
+
+/* 
+@media (min-width: 600px) {                                 diseño para tablet con media query (consulta de medios)
+    .grid-container {
+        grid-template-columns: 200px auto;                     para determinar el ancho de las columnas, la primera de 200px y la otra que tome el ancho automatico 
+        grid-template-rows: 100px 50px auto 100px;             para ajustar el ancho de las filas en el orden declarado en la lista de grid-container 
+        background-color: #0000ff;                             cuando tenga mas de 600px cambia a azul 
+        grid-template-areas:                                   definir distintas areas que va a contener nuestro grid 
+        "header header"
+        "navbar navbar"
+        "sidebar main"                                         con esta plantilla reasignamos los elementos de la lista para adaptarla a una tablet de 600px 
+        "footer footer";
+}
+}
+*/
+
+@media (min-width: 600px) {                  /* diseño para tablet con media query (consulta de medios) */             
+    .grid-container {
+        background-color: #0000ff;
+        grid-template:                       /* atajo para resolver mas facil el tamaño de las filas y columnas del grid-container */                          
+        "header header"  100px               /* alto de las filas */
+        "navbar navbar"  50px
+        "sidebar main"   auto             
+        "footer footer"  100px /             /* con el slash separo el ancho y doy valores a las columnas */
+        200px   auto;                        /* ancho de las columnas */
+}
+}
+
+@media (min-width: 900px) {                      /* diseño para desktop con media query (consulta de medios) */             
+    .grid-container {
+        background-color: #645f2c;
+        grid-template:                           /* atajo para resolver mas facil el tamaño de las filas y columnas del grid-container */                          
+        "header  header  header"   100px         /* todas las areas siempre tienen que ser rectangulos */
+        "navbar  main    sidebar"  auto           
+        "footer  footer  footer"   100px /       /* con el slash separo el ancho y doy valores a las columnas */
+        200px    auto    200px;                  /* ancho de las columnas */
+}
+}
