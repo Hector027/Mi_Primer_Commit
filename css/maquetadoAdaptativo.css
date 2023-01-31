@@ -88,7 +88,7 @@ font-family: 'Times New Roman', Times, serif;
 
 @media (min-width: 900px) {                      /* diseño para desktop con media query (consulta de medios) */             
     .grid-container {
-        background-color: #645f2c;
+        background-color: #f0dd09;
         grid-template:                           /* atajo para resolver mas facil el tamaño de las filas y columnas del grid-container */                          
         "header  header  header"   100px         /* todas las areas siempre tienen que ser rectangulos */
         "navbar  main    sidebar"  auto           
