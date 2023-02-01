@@ -1,0 +1,118 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;                /* para poner todos los botones en columna */
+}
+
+.btn {
+    text-decoration: none;                 /* para quitar la linea que traen todos los botones */
+    padding: 40px 50px;                    /* para separarlos 20px arriba y abajo y 50px de lado */
+    font-size: 1.5rem;
+    position: relative;
+    margin: 32px;
+}
+
+.btn1 {
+    background: #039be5;
+    color: #0b0b0e;
+    border-radius: 50px;
+    transition: transform 0.3s ease;         /* ease: continuo */
+}
+
+.btn1::after, .btn1::before {                /* se define 3 botones redondeados para efecto hover */
+    content: "";                             /* contenido vacio */
+    position: absolute;
+    opacity: 0.3;
+    background: #039be5;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn1:hover {
+    transform: translate(-12px, -12px);
+}
+
+.btn1:hover::after {
+    transform: translate(6px, 6px);
+}
+
+.btn1:hover::before {
+    transform: translate(12px, 12px);        /* cuanto se separan los botones redondeados con el puntero del mouse */
+}
+
+.btn2 {
+    color: #d8287d;
+}
+
+.btn2::after, .btn2::before {                /* se define 2 botones cuadrados para efecto hover */
+    border: 3px solid #039be5;
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.btn2:hover::after {
+    transform:translate(-5px, -5px);        
+}
+
+.btn2:hover::before {
+    transform:translate(10px, 10px);        /* cuanto se separan los botones cuadros con el puntero del mouse */
+}
+
+.btn3 {
+    color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;                       /* esto evita que el boton 3 sea un cuadrado y gire */
+}
+
+.btn3::after {                
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -50px;
+    left: -100px;
+    background: #13ff13;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn3:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.7);            /* el último número de (rgba) es el grado de transparencia */
+}
+
+.btn3:hover::after {
+transform: rotate(150deg);                /* definir cuantos grados de rotación tiene el boton */
+}
