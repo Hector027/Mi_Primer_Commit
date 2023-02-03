@@ -1,19 +1,93 @@
 
+.container {
+    display: inline-block;                              /* todos los botones quedaron alineados */   
+}
+
+.btn {
+    margin: 150px;                                      /* margen de separacion entre los botones */
+}
+
 .btn1 {
-    width: 100px;
+    background-color: rgba(0, 255, 76, 0.77);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     border-radius: 10px;
     text-decoration: none;
     color: #ffffff;
-    background-color: rgba(0, 255, 76, 0.77);
     text-align: center;
-    display: block;
-    margin: 150px;
+    padding: 15px 15px;                                  /* alinear el texto dentro del boton, le da margen arriba/abajo y derecha/izquierda */
 }
 
 .btn1:hover {
-    background-color: transparent;
+    background-color:transparent;                        /* cuando se posa el puntero del mouse en el boton el color de fondo es transparente */
     border: 2px solid rgba(0, 255, 76, 0.77);
     color: rgba(0, 255, 76, 0.77);
 }
+
+.btn2 {
+    background-color: #7fffd4;
+    border: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    color: #000;                           /* color del texto */
+    font-size: 16px;                         /* tamaño de la letra */
+    cursor: pointer;                         /* para que aparezca la manito */
+    text-transform: uppercase;               /* poner en mayuscula el texto del boton */
+} 
+
+.btn2:hover {
+    background-color: #777ea7;
+}
+
+.btn3 {
+    background-color: #ac511d;
+    border: 10px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: 4px solid #ddbf15;
+    text-align: center;
+    color: #f5f5ed;                         /* color del texto */
+    font-size: 16px;                          /* tamaño de la letra */
+}
+
+.btn3:hover {
+    background-color: #dfe7d3;
+}
+
+.btn4 {
+    background-color: #eb63c2;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px solid;
+    cursor: pointer;
+}
+
+@media(min-width: 768px) {                     /* Responsive, si el tamaño es < 768px es rosado, si es > pasa a verde */
+    .btn4 {
+        padding: 15px 80px; 
+        background-color: #7fffd4;
+    }
+}
+
+.contenedor {
+    display: inline-block;
+}
+
+.btnn {                                        /* defino las mismas caracteristicas para todos los botenes que tiene contenedor */
+    background-color: #b6b0a8;
+    border-radius:  10px;
+    padding: 15px 15px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 120px;                            /* separacion entre los botones */
+    border: 2px solid;
+}
+
+.btn5:hover {
+    background-color: #7fffd4;
+
+}
+
