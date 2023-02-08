@@ -3,8 +3,8 @@
     display: inline-block;                              /* todos los botones quedaron alineados */   
 }
 
-.btn {
-    margin: 150px;                                      /* margen de separacion entre los botones */
+.btnA {
+    margin: 100px;                                      /* margen de separacion entre los botones */
 }
 
 .btn1 {
@@ -74,15 +74,15 @@
     display: inline-block;
 }
 
-.btnn {                                        /* defino las mismas caracteristicas para todos los botenes que tiene contenedor */
+.btnB {                                         /* define las mismas caracteristicas para todos los botenes que tiene contenedor */
     background-color: #b6b0a8;
-    border-radius:  10px;
+    border-radius:  5px;
     padding: 15px 15px;
     text-decoration: none;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    margin: 120px;                            /* separacion entre los botones */
+    margin: 100px;                              /* separacion entre los botones */
     border: 2px solid;
 }
 
@@ -91,3 +91,215 @@
 
 }
 
+.btn6 {                                          /* boton redondo*/
+    border-radius: 100%;                         /* se mejora con el padding */ 
+    font-size: 20px;                             /* tamaño texto del boton */
+    color: #ffffff;
+}
+
+.conten {
+    width: 100%;
+    display: grid;                                /* esta trabajando con grid */
+    grid-template-columns: repeat(3, 1fr);        /* el grid esta dividido en 3 columnas */
+    gap: 40px;
+}
+
+.btnC {                                           /* forma para todos los botones de 10 al 15 */
+    display: inline-flex;                         /* para permitir mas botones a la derecha (inline) y que trabaje con flexbox para poner un ancho */
+    width: 100%;                                  /* esta dividido en 3 columnas y defino el 100% del ancho */
+    height: 80px;
+    background: #141414;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;                               /* tamaño del texto del boton */
+    align-items: center;                           /* para alinear el texto en forma vertical */
+    justify-content: center;                       /* para alinear el texto en forma horizontal */
+    cursor: pointer;
+    border: none;                                  /* para quitar el borde que por defecto agregan los navegadores */
+    text-transform: uppercase;                     /* todos los textos en mayusculas */
+    transition: .3s;                               /* como se trabaja con animaciones la transicion sera de .3s con una funcion de tiempo "ease all" para todas las propiedades */
+    border-radius: 5px;
+    position: relative;                            /* para que abarque todo el boton en combinacion con la "posicion:absolute" en ".btn10::after" */
+    overflow: hidden;                              /* para respetar los bordes de los botones y la capa no se salga del boton */
+}
+
+.btnC span {                                       /* para todos los "span" dentro del boton */
+    position: relative;
+    z-index: 2;                                    /* como es "2" va a quedar arriba de la capa amarilla */
+    transition: .3s ease all;
+}
+
+.btn10::after {
+    content: "";                                   /* cadena vacia, si no se pone no funciona */
+    background: #c4b107;
+    width: 100%;                                   /* para que el color abarque el 100% del ancho */
+    height: 100%;                                  /* para que el color abarque el 100% del ancho */
+    position: absolute;                            /* para que abarque todo el boton en combinacion con la "posicion:relative" en ".btnC" */
+    z-index: 1;                                    /* para que la capa amarilla no tape el texto */
+    top: -80px;                                    /* con "top" subimos la capa amarilla y la bajamos en "hover::after" */
+    left: 0;
+    transition: .3s ease-in-out all;               /* para que la banda amarilla entre lento */
+}
+
+.btn10:hover::after {                              /* agregar animacion al seudoelemento "after" */
+    top: 0;                                        /* bajamos la capa amarilla a "=" */
+}
+
+.btn11::after {
+    content: "";
+    width: 100%;                                   /* indico que la capa tenga un ancho del 100% */
+        /* height: 40px; */                        /* al quitar el alto quedan solo las 4 bandas diagonales de color y desaparece la banda naranja */
+        /* background:orange; */                   /* color de la capa, cuando elimino las diagonales tengo que quitar este color */ 
+    position: absolute;                            /* para sacar la capa */
+    z-index: 1;                                    /* para que el "span" quede arriba de la capa */
+    top: 0;
+        /* left: -100%; */                         /* para que entre de izquierda a derecha la capa, no se usa porque la diagonal queda dentro del boton */
+    left: calc(-100% - 80px);                      /* para que la diagonal tenga el mismo tamaño del boton */
+        /* border-top: 40px solid green; */        /* agregar la banda diagonal con "border" lo repito 4 veces con distintos colores para armar las 4 diagonales, no se ve por "overflow" */
+        /* border-left: 40px solid blue; */        /* elimino las 2 banda diagonales de color sacando "border-top" y "border-left" */
+    border-bottom: 80px solid #286cff;           /* 80 px es el tamaño del boton */
+    border-right: 80px solid transparent;          /* elimino esta banda diagonal de color haciendo que sea transparente */
+    transition: .4s ease-in-out all;               /* con el "overflow" en ".btnC" la banda diagonal de color entre prefectamente en el boton */
+}
+
+.btn11:hover::after {
+    left: 0;
+}
+
+.btn12::after {                                    /* usa el mismo codigo y animacion que el boton 10 */
+    content: "";                                   /* cadena vacia, si no se pone no funciona */
+    background: #2dc407;
+    width: 100%;                                   /* para que la banda de color verde abarque el 100% del ancho */
+    height: 400%;                                  /* para que la banda de color verde abarque el 300% del ancho del boton para poder aplicarle los bordes redondos */
+    position: absolute;                            /* para que la banda de color verde abarque todo el boton en combinacion con la "posicion:relative" en ".btnC" */
+    z-index: 1;                                    /* para que la banda de color verde no tape el texto del boton */
+    top: -400px;                                   /* con "top" subimos la banda de color verde sobre el boton y la bajamos en "hover::after" */
+    left: 0;
+    transition: .4s ease-in-out all;               /* para que la banda de color verde entre lento */
+    border-radius: 0px 0px 300px 300px;            /* 0px borde superior izquierdo y derecho, 300px borde inferior izquierdo y derecho para la animacion redondeada */
+}
+
+.btn12:hover::after {                              /* agregar animacion al seudoelemento "after" */
+    top: 0;                                        /* para cuando paso el cursor el seudoelemento "after" la banda de color verde cambie de posicion */
+}
+
+.btn13::after {                                    /* usa el mismo codigo y animacion que el boton 10 */
+    content: "";                                   /* cadena vacia, si no se pone no funciona */
+    background: none;                              /* le quito el color de fondo y se lo doy en "hover" */
+    width: 1px;                                    /* para que el punto de color rojo sea pequeño y este centrado */
+    height: 1px;                                   /* para que el punto de color rojo sea pequeño y este centrado */
+    position: absolute;                            /* para que abarque todo el boton en combinacion con la "posicion:relative" en ".btnC" */
+    z-index: 1;                                    /* para que la capa amarilla no tape el texto */
+    top: 50%;                                      /* para que el punto de color rojo este centrado en el boton */
+    left: 50%;                                     /* para que el punto de color rojo este centrado en el boton */
+    transition: .3s ease-in-out all;               /* para que la banda amarilla entre lento */
+    border-radius: 100px;                          /* para que la animacion no sea un cuadrado se pone un borde redondeado */
+    transform-origin: center;                      /* para que el circulo crezca desde el centro del boton */
+}
+
+.btn13:hover::after {                              /* agregar animacion al seudoelemento "after" */
+    transform: scale(200);                         /* cuando paso el cursor el punto rojo va a crecer al valor de "scale" */
+    background: #cc1010;                         /* cuando pase el cursor va a tener este color de fondo */
+}
+
+.btn13:hover {
+    background: #960909;                         /* cuando se amplia el circulo queda un borde mas oscuro */
+}
+
+.btn14 span {                                      /* para acceder al "span", el texto */
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 48%;                                     /* para situar el texto al centro de la animacion, valor a ojo */
+}
+
+.btn14 .icono {
+    display: flex;
+    align-items: center;                           /* alinear el icono en forma vertical al centro */
+    position: absolute;                            /* para poder desplazar el icono en la animacion */
+    z-index: 2;                                    /* para que el icono pase por arriba del texto */
+        /* top: 0; */                              /* lo saco para que quede alineado con el texto */
+    left: -48px;                                   /* para que quede fuera del boton */
+        /* background: #286cff; */                 /* color de fondo del icono, se lo saco */
+    transition: .4s ease-in-out all;               /* para que el icono tenga la animacion de correrse a la derecha */
+    opacity: 0;                                    /* mientras no pase el cursor sobre el boton la opacidad es de 0 */
+}
+
+.btn14 svg {
+    color: #ffffff;                              /* color del icono */
+    height: 35px;                                  /* tamaño del icono */
+    width: 35px;                                   /* tamaño del icono */
+}
+
+.btn14:hover {
+    background: #2f9b05;                         /* cuando paso el cursor sobre el boton la animacion sera de este color */
+}
+
+.btn14:hover .icono {                              /* cuando paso el cursor sobre el boton el cursor se mueve a la derecha */
+    left: calc(100% - 50px);                       /* para tener la animacion de correrse a la derecha el icono */ 
+    opacity: 1;                                    /* cuando va entrando la flecha del icono parece que fuera apareciendo de apoco */
+}
+
+.btn14:hover span {
+    left: 20px;                                    /* para correr el texto a la izquierda en la animacion */
+}
+
+.btn15 {
+    background: #b0b0e2;                             /* para que no tenga fondo */
+    color: #000;                                 /* color de texto */
+}
+
+.btn15 svg {                                       /* para darle estilos a la recta "rect" */
+    width: 100%;
+    height: 100%;
+    position: absolute;                            /* para poder acomodarlo dentro del boton */
+    top: 0;
+    left: 0;
+    /* fill: none; */                                   /* para que no tenga un color de relleno */
+}
+
+.btn15 rect {
+    width: 100%;
+    height: 100%;
+    stroke: #000;                                /* para que la recta tenga un borde */
+    stroke-width: 10px;                            /* para que el borde de la recta sea mas grueso */
+    stroke-dasharray: 5;                        /* hace que la recta tenga espaciado en su perimetro */
+    stroke-dashoffset: 90;                       /* hace aumentar el espaciado de la recta cada vez que aumentamos el valor dando la sensacion de movimiento */
+    transition: .6s ease all;                      /* para la animacion ponemos un "transition" */
+}
+
+.btn15:hover rect {                                /* para lograr la animacion con el cursor */
+    stroke-dashoffset: 0;                          /* cuando pasamos el cursor reseteamos para que se rellene la linea recta */
+}
+
+.btn15:hover {
+    background: #ffd700;
+}
+
+.retenedor{
+    display: inline-flex;
+}
+
+.caja {
+    border: #960909 solid 4px;
+    width: 100px;
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.caja.azul {
+    border: #d6b80e solid 4px;
+    background: #7fffd4;
+    color: #2843d8;
+    border-radius: 15px;
+}
+
+.btn16 {
+    border: #44c723 solid 4px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}

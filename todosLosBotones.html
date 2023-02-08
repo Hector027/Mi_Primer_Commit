@@ -2,35 +2,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos Los Botones</title>
     <link rel="stylesheet" href="css/todosLosBotenes.css">
+    
 </head>
 <body>
     <div class="container" style="text-align: center">                                             <!-- para que los textos esten centrados -->
 
-        <a class="btn btn1" href="https://www.google.com.ar" target="_blank" >Google</a>     <!-- target="_blank" permite abrir el link en otra pagina nueva -->
-        <button class="btn btn2">boton</button>
-        <input class="btn btn3" type="button" value="input">
-        <input class="btn btn4" type="submit" value="Enviar">                                      <!-- definido en CSS como Responsive -->
+        <a class="btnA btn1" href="https://www.google.com.ar" target="_blank" >Google 1</a>        <!-- target="_blank" permite abrir el link en otra pagina nueva -->
+        <button class="btnA btn2">boton 2</button>
+        <input class="btnA btn3" type="button" value="input 3">
+        <input class="btnA btn4" type="submit" value="Enviar 4">                                   <!-- definido en CSS como Responsive -->
 
     <div>
-
-    <br>
-    
+        
     </div class="contenedor">
         
-        <a class="btnn btn5" href="https://www.mozilla.org/es-AR/firefox/new/" target="_blank" >Link</a>         <!-- target="_blank" permite abrir el link en otra pagina nueva -->
-        <button class="btnn btn6">BTN</button>
-        <input class="btnn btn7" type="button" value="Entrada">
-        <input class="btnn btn8" type="submit" value="Send">
-        <button class="btnn btn9" type="button">                                                                 <!--boton con link a una imagen -->
+        <a class="btnB btn5" href="https://www.mozilla.org/es-AR/firefox/new/" target="_blank" >Link 5</a>                      <!-- target="_blank" permite abrir el link en otra pagina nueva -->
+        <button class="btnB btn6">B 6</button>
+        <input class="btnB btn7" type="button" value="Entrada 7">
+        <input class="btnB btn8" type="submit" value="Send 8">
+        <button class="btnB btn9" type="button">                                                                                <!--boton con link a una imagen -->
             <img src="https://whitesw6.elbenwald.de/media/52/03/b4/1629829918/E1060308_2.jpg" width= "50px" height="50px" alt= >
         </button>
 
     <div>
+        
+    <div class="conten">
+
+        <button class="btnC btn10"><span>Boton 10</span></button>                                    <!-- "span" no permite que los efectos agrgados tapen el texto del boton -->
+        <button class="btnC btn11"><span>Boton 11</span></button>
+        <button class="btnC btn12"><span>Boton 12</span></button>
+        <button class="btnC btn13"><span>Boton 13</span></button>
+        <button class="btnC btn14">
+                <div class="icono">                                                                  <!-- icono, codigo de la libreria bootstrap -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </div>                                                       <!-- se coloca el icono dentro de un "div" para controlar la animacion -->
+                    <span>Boton 14</span>
+        </button>
+        <button class="btnC btn15">
+            <span>Boton 15</span>
+                <svg>
+                    <rect x="0" y="0" fill="none"></rect>                    <!-- creacion de una recta -->
+                </svg>
+        </button>
+
+    </div>
+    
+    <br>
+
+    <div class="retenedor">
+    
+             <button class="btn16" id="btn16">Click y Cambio</button>
+            <div class="caja" id="caja">Cambio</div>
+
+            <script src="js/todosLosBotones.js"></script>                    <!-- siempre se llama al "scrip" cuando terminamos el codigo js -->
+
+    </div>
 
 </body>
 </html>
