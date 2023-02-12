@@ -1,0 +1,109 @@
+
+.caja {
+    background: #e99999;
+    width: 500px;                                   /* estas son las dimensiones de la "caja" padre, ancho */
+    height: 350px;                                  /* estas son las dimensiones de la "caja" padre, alto */
+    display: flex;                                  /* convertimos nuestra "caja" padre en flexible, los elementos se alinian horizontalmente (por defecto) */
+        /* flex-direction: column; */               /* aca la direccion de los elementos va a ser "vertical" */ 
+        /* flex-direction: column-reverse; */       /* coloca los elementos en forma vertical opueta, o sea abajo izquierda de la caja */
+        /* flex-direction: row-reverse; */          /* coloca los elementos en forma horizontal opueta, o sea del lado derecho de la caja */
+    flex-direction: row;                            /* aca decimos cual va a ser la direccon principal de los elementos de nuestra "caja", "horizontal" no es necesario ponerlo ya viene por defecto */
+        /* flex-direction: column; */               /* aca decimos cual va a ser la direccon principal de los elementos de nuestra "caja", "vertical" */
+        /* justify-content: flex-end; */            /* envia a los elementos al final de su eje principal */
+        /* justify-content: center; */              /* envia a los elementos al centro de su eje principal */             
+        /* justify-content: space-around; */        /* crea un espacio entre los elementos de su eje principal */
+        /* justify-content: space-between; */       /* envia los elementos a cada extremo de su eje principal */
+        /* justify-content: flex-start; */          /* envia a los elementos al principio de su eje principal, no es necesario ponerlo, por defecto ya vienen al principio todos los elementos */
+        /* align-items: center; */                  /* si declaramos nuestro eje principal como "flex-direction: row;" va a color todos los elementos en el eje secundario como "column" */
+        /* align-items: flex-start; */              /* no hay cambio porque los elementos vienen por defecto en el borde superior izquierdo */
+        /* align-items: flex-end; */                /* va alinear los elementos al final del eje secundario, abajo a la izquierda */
+    justify-content: center;                        /* alineamos los elementos en su eje principal horizontal en el centro */
+    align-items: center;                            /* alineamos los elementos en su eje principal vertical en el centro */
+        /* flex-wrap: wrap; */                      /* si la suma del ancho de los elementos hijos supera el ancho de la caja "padre" se usa "wrap", entonces los elementos se muestran en distintas lineas horizontales */
+        /* flex-wrap: wrap-reverse; */              /* hace saltar de linea los elementos hijos si superan el ancho de la caja "padre", pero los invierte en su posicion */
+}
+
+.hijo1 {
+    background: #000000;
+    width: 50px;                                    /* estas son las dimensiones de los elementos hijos */
+        /* width: 20%; */                           /* este 20% lo estamos sacando del ancho total del contenedor padre (500px) que serian 100px. Si ponemos 10% equinalen a 50px y la figura no cambia */
+        /* width: 400px; */                         /* si la suma de los 400px de los 2 elementos supera el ancho de la caja padre (500px), las figuras se muestran igual, pero recortadas en las medidas para que se puedan visualizar */
+    height: 50px;
+    border-radius: 100%;
+        /* align-self: flex-end; */                 /* alinea un solo elemento en el eje secundario de la caja, lo envia abajo de la caja en otro eje del elemento existente */
+        /* align-self: flex-start; */               /* alinea un solo elemento en el eje secundario de la caja, lo envia arriba de la caja en otro eje del elemento existente */
+    align-self: center;                             /* alinea los elementos en el centro */
+        /* flex-grow: 1; */                         /* el elemento por su factor de crecimiento toma un ancho de 250px. La caja padre (500px / 2 = 250px (cada elemento tiene un factor de 1). Solo recibe valores numericos positivos */
+}
+
+.hijo2 {
+    background: #24cc1f;
+    width: 50px;
+        /* width: 200px; */                          /* si la suma de los 200px de los 2 elementos supera el ancho de la caja padre (500px), las figuras se muestran igual, pero recortadas en las medidas para que se puedan visualizar */
+    height: 50px;
+    border-radius: 100%;
+    align-self: center;
+        /* flex-grow: 1; */                          /* el elemento por su factor de crecimiento toma un ancho de 250px. La caja padre (500px / 2 = 250px (cada elemento tiene un factor de 1) */
+}
+
+.campo {
+    width: 500px;
+    height: 350px;
+    background: #ced4d3;
+    display: flex;
+    flex-direction: row;                             /* direccion de la caja flexible es horizontal, eje por defecto */
+    justify-content: center;
+    align-items: center;
+}
+
+.hijo3 {
+    width: 50px;
+    height: 50px;
+    color: #f3f3ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #b15e5e;
+    order: 0;                                         /* para ordenar los elementos en su eje principal, debo darle un valor numerico, el numero mayor se posiciona a la derecha y el menor a la izquierda */
+    border-radius: 50%;
+}
+
+.hijo4 {
+    width: 50px;
+    height: 50px;
+    color: #f3f3ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #d1b308;
+    order: 0;                                         /* "order"viene por defecto con el valor "0" */
+    border-radius: 50%;
+}
+
+.hijo5 {
+    width: 50px;
+    height: 50px;
+    color: #f3f3ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #3a44d1;
+    order: 0;                                        /* si "flex-direction: row-reverse" los elementos con mayor valor numerico se situan a la izquierda */
+    border-radius: 50%;
+}
+
+.hijo6 {
+    width: 50px;
+    height: 50px;
+    color: #f3f3ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #24be16;
+    order: 0;
+    border-radius: 50%;
+}
