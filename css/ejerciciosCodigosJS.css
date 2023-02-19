@@ -1,0 +1,83 @@
+
+
+/*   ALERTA RECORDATORIO   */
+.btn1 {
+    background: #b68282;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*   CALCULADORA   */
+.btn2 {
+    background: #5d6581;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer; 
+    color: #f8f8f8;
+}
+
+/*   CAMBIAR EL TEXTO   */
+.btn3 {
+    background: #edf1aa;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer; 
+}
+
+/*   RELOJ   */
+.cajaReloj {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;                 /* buscar informacion de CSS 3 "webkit" en https://www.w3.org/TR/css-ui-3/#box-sizing, lo utilizan los navegadores como Chrome */
+    -moz-box-sizing: border-box;                    /* estilos o pautas W3C para los navegadores interpretar CSS, "moz" lo utilizan navegadores como Firefox */
+    box-sizing: border-box;                         /* La propiedad CSS box-sizingnos permite incluir el relleno y el borde en el ancho y alto total de un elemento */
+    /* background: url(bg.jpg) #000000; */          /* para agregar una imagen de fondo de la carpeta del disco, si no puede cargar la imagen pone un fondo "negro" */
+}
+
+.wrap {
+    width: 90%;
+    max-width: 1000px;                              /* ancho maximo */
+    /* margin: auto; */                             /* esta comentado porque el reloj estaria al centro */
+}
+
+.widget {                                           /* para el estilo de la fecha y hora */
+    width: 40%;
+    margin: 2em;                                    /* para que no ocupe todo el ancho y sea una caja */
+    /* margin: 32px; */                             /* esto es equivalente a "2em" */
+}
+
+.widget p {                                         /* para darle estilos a los "parrafos" */
+    display: inline-block;                          /* poner la fecha una al lado de la otra y las horas tambien una al lado de la otra */
+    line-height: 1em;                               /* para establecer la distancia entre lineas de texto (la separacion) */
+}
+
+.fecha {
+    /* font-family: ; */                             /* se pueden descargar fuentes de "google fonts" para las letras */
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.3125rem;
+    /* margin-bottom: 5px; */                        /* equivale a "0.3125rem*/
+    background: rgba(0,0,0,.5);                    /* cuando se usa el color "rgba" el ultimo digito es la transparencia */
+    padding: 20px;
+    width: 100%;
+}
+
+.reloj {
+    /* font-family: ; */                             /* para agregar otra fuente que no sea la que viene por defecto */
+    width: 100%;
+    padding: 20px;
+    font-size: 4em;                                  /* para que el tamaño de la fuente sea mas grande que la fecha */
+    text-align: center;
+    background: rgba(0,0,0,.5);
+}
+
+.reloj .caja-segundos {
+    display: inline-block;                           /* para que quede alineado en la misma linea que las horas */
+}
+
+.reloj .segundos,
+.reloj .ampm {
+    font-size: 2rem;
+    display: block;                                  /* para que "ampm" y segundos queden uno arriba de otro */
+}
