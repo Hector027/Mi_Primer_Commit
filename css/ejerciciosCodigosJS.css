@@ -8,15 +8,6 @@
     cursor: pointer;
 }
 
-/*   CALCULADORA   */
-.btn2 {
-    background: #5d6581;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer; 
-    color: #f8f8f8;
-}
-
 /*   CAMBIAR EL TEXTO   */
 .btn3 {
     background: #edf1aa;
@@ -80,4 +71,21 @@
 .reloj .ampm {
     font-size: 2rem;
     display: block;                                  /* para que "ampm" y segundos queden uno arriba de otro */
+}
+
+/*   CALCULADORA SUMAR   */ 
+.btn2 {
+    background: #5d6581;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer; 
+    color: #f8f8f8;
+}  
+
+.btn4 {
+    background: #c5c9d8;
+    border-radius: 5px;
+    padding: 10px;
+    color: #4f74db;  
+    display: flex;
 }

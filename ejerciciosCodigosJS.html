@@ -7,34 +7,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicios Codigos JS</title>
         <link rel="stylesheet" href="css/ejerciciosCodigosJS.css">
-        <script src="js/ejerciciosCodigosJS.js"></script>
 </head>
 
 <body>
 
         <!--   ALERTA RECORDATORIO   -->
+        <h2>* Recordatorio</h2>
+
         <input type="button" onclick="recordatorio()" value="Has Click" class="btn1">
+        <script src="js/ejerciciosCodigosJS.js"></script>                                     <!-- siempre es recomendable cargar los scrip en el boby-->
 
         <br>
         <br>
 
-        <!--   CALCULADORA   -->
-        <form action="">
-                <input type="text" id="entrada1">                                                    <!-- las entradas son de tipo texto -->
-                <input type="text" id="entrada2">
-                <input type="button" class="btn2" value="Sumar" onclick="alert( suma(10,50) );">
-        </form>
-
+      
         <!--   CAMBIAR EL TEXTO   -->
+        <h2>* Cambiando el Texto</h2>
+
         <div class="container text-center py-5">
-                <h2 id="titulo" class="display-3 py-5">Cambiando el Texto</h2>
+                <h2 id="titulo" class="display-3 py-5">Julio Coto</h2>
                 <button id="boton" class="btn3 btn-danger" onclick='document.getElementById("titulo").innerHTML = nombre + apellido'> Haz click y Cambia</button>    <!-- a "button" le agregamos un evento "onclick" para que tome el elemento "titulo" y cambie le texto en "h2" -->
         </div>                                                                                                                                                       <!-- "onclick" tiene que llevar comillas simples porque "titulo" tiene dobles para evitar cerrar la sentencia -->
-                                        
+         <script src="js/ejerciciosCodigosJS.js"></script>
+
         <br>
         <br>
 
         <!--   RELOJ   -->
+        <h2>* Reloj</h2>
+
         <div class="cajaReloj">
                 <div class="wrap">                                                            <!-- esta clase es para centrar la caja del reloj -->
                         <div class="widget">                                                  <!-- conjunto para la fecha y hora -->
@@ -59,8 +60,19 @@
                         </div>
                 </div>
         </div>
-        
         <script src="js/ejerciciosCodigosJS.js"></script>
+
+
+        <!--   CALCULADORA SUMAR   --> 
+        <h2>* Operacion de Suma</h2>
+
+        <div>
+                <input type="text" id="entrada1" placeholder="numero 1">                      <!--  las entradas son de tipo texto -->    
+                <input type="text" id="entrada2" placeholder="numero 2">
+                <button id="calcular" class="btn2">Sumar</button>
+                <button id="resultado" class="btn4">Resultado</button>
+        </div>
+        <script src="js/ejerciciosCodigosJS.js"></script> 
 
 </body>
 </html>

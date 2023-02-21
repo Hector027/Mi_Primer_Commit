@@ -5,15 +5,6 @@ function recordatorio() {
 }
 
 
-// CALCULADORA
-var suma = function (numero1, numero2) {
-        var numero1 = parseFloat(document.getElementById("entrada1").value);         /* la propiedad "parseFloat" transforma toda la cadena de texto en un entero flotante, acepta decimales */
-        var numero2 = parseFloat(document.getElementById("entrada2").value);         /* "entrada1" y "2" esta declarada como entrada de texto */
-        var resultado = numero1 + numero2;
-        return resultado;
-}    
-
-
 // CAMBIAR EL TEXTO
 var nombre = "Luis";                                                                 /* variable tipo "string", son "key sensitive" */
 var apellido = " Perez";                                                             /* colocar espacio en apellido para que en la concatenacion no se "peguen" */
@@ -79,7 +70,25 @@ var apellido = " Perez";                                                        
             pSegundos.textContent = segundos;
     };
 
-            actualizarHora();                                                      /* llamo a la funcion "actualizarHora" para que se ejecute automaticamente cada segundo, que fue declarada al principio del ejercicio */
-            var intervalo = setInterval(actualizarHora, 1000);                     /* la propiedad "setInterval" recibe 2 parametros, llama repetidamente a una función o ejecuta un fragmento de código, con un retraso de tiempo fijo entre cada llamada.*/
+            actualizarHora();                                                     /* llamo a la funcion "actualizarHora" para que se ejecute automaticamente cada segundo, que fue declarada al principio del ejercicio */
+            var intervalo = setInterval(actualizarHora, 1000);                    /* la propiedad "setInterval" recibe 2 parametros, llama repetidamente a una función o ejecuta un fragmento de código, con un retraso de tiempo fijo entre cada llamada.*/
 
-} ())
+} ());
+
+
+
+// CALCULADORA SUMAR
+/* var ent1 = document.querySelector ("entrada1") */                             /* esta es una forma de acceder como la sentencia de abajo */
+var txtn1 = document.getElementById("entrada1");                                 /* (si declaro una constante para las variables el "Reloj" no funciona), utilice "var" para capturar el numero en la entrada 1 */
+var txtn2 = document.getElementById("entrada2");  
+var respuesta = document.getElementById("resultado"); 
+var btncalcular = document.getElementById("calcular");
+btncalcular.addEventListener('click',calcular);
+
+function calcular(){                                                             /* la funcion tiene que tener el mismo nombre (id) del boton para poder capturar el evento click */
+    let op1 = parseFloat(txtn1.value);
+    let op2 = parseFloat(txtn2.value);
+    let sumatotal = op1 + op2;
+    respuesta.innerText = sumatotal;
+    respuesta.style="color:red";
+};
