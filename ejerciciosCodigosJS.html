@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
         <meta charset="UTF-8">
@@ -14,8 +14,8 @@
         <!--   ALERTA RECORDATORIO   -->
         <h2>* Recordatorio</h2>
 
-        <input type="button" onclick="recordatorio()" value="Has Click" class="btn1">
-        <script src="js/ejerciciosCodigosJS.js"></script>                                     <!-- siempre es recomendable cargar los scrip en el boby-->
+        <input type="button" onclick="recordatorio()" value="Has Click" class="btn1">         <!-- aca el evento "onclick" es la funcion "recordatorio()"" -->
+        <script src="js/ejerciciosCodigosJS.js"></script>                                     <!-- siempre es recomendable cargar los scrip en el body-->
 
         <br>
         <br>
@@ -25,7 +25,7 @@
         <h2>* Cambiando el Texto</h2>
 
         <div class="container text-center py-5">
-                <h2 id="titulo" class="display-3 py-5">Julio Coto</h2>
+                <h2 id="titulo" class="display-3 py-5">Julio Coto</h2>                        <!-- los "id" son unicos no se repiten, la "class" se pueden repetir -->
                 <button id="boton" class="btn3 btn-danger" onclick='document.getElementById("titulo").innerHTML = nombre + apellido'> Haz click y Cambia</button>    <!-- a "button" le agregamos un evento "onclick" para que tome el elemento "titulo" y cambie le texto en "h2" -->
         </div>                                                                                                                                                       <!-- "onclick" tiene que llevar comillas simples porque "titulo" tiene dobles para evitar cerrar la sentencia -->
          <script src="js/ejerciciosCodigosJS.js"></script>
@@ -43,7 +43,7 @@
                                         <p id="diaSemana" class="diaSemana"></p>              <!-- "parrafos" para agregarlos dinamicamente a la caja del reloj con JS -->
                                         <p id="dia" class="dia"></p>
                                         <p>de </p>
-                                        <p id="mes" class="mes"></p>
+                                        <p id="mes" class="mes"></p>                          <!-- los "id" son unicos no se repiten, la "class" se pueden repetir -->
                                         <p>del </p>
                                         <p id="year" class="year"></p>
                                 </div>
@@ -63,16 +63,17 @@
         <script src="js/ejerciciosCodigosJS.js"></script>
 
 
-        <!--   CALCULADORA SUMAR   --> 
+        <!--   SUMAR   --> 
         <h2>* Operacion de Suma</h2>
 
         <div>
                 <input type="text" id="entrada1" placeholder="numero 1">                      <!--  las entradas son de tipo texto -->    
                 <input type="text" id="entrada2" placeholder="numero 2">
                 <button id="calcular" class="btn2">Sumar</button>
-                <button id="resultado" class="btn4">Resultado</button>
+                <button id="resultado" class="btn4">Resultado</button>                        <!-- los "id" son unicos no se repiten, la "class" se pueden repetir -->
         </div>
         <script src="js/ejerciciosCodigosJS.js"></script> 
 
+        
 </body>
 </html>

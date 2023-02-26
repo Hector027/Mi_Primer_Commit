@@ -77,18 +77,22 @@ var apellido = " Perez";                                                        
 
 
 
-// CALCULADORA SUMAR
-/* var ent1 = document.querySelector ("entrada1") */                             /* esta es una forma de acceder como la sentencia de abajo */
-var txtn1 = document.getElementById("entrada1");                                 /* (si declaro una constante para las variables el "Reloj" no funciona), utilice "var" para capturar el numero en la entrada 1 */
-var txtn2 = document.getElementById("entrada2");  
-var respuesta = document.getElementById("resultado"); 
-var btncalcular = document.getElementById("calcular");
-btncalcular.addEventListener('click',calcular);
+// SUMAR
+    /* var ent1 = document.querySelector ("entrada1") */                          /* esta es una forma de acceder como la sentencia de abajo, no recomendable para esta aplicacion */
+    var txtn1 = document.getElementById("entrada1");                              /* (si declaro las variables como constantes el "Reloj" no funciona), utilice "var" para capturar el numero en la entrada 1 */
+    var txtn2 = document.getElementById("entrada2");  
+    var respuesta = document.getElementById("resultado"); 
+    var btncalcular = document.getElementById("calcular");
+    btncalcular.addEventListener('click',calcular);
 
-function calcular(){                                                             /* la funcion tiene que tener el mismo nombre (id) del boton para poder capturar el evento click */
-    let op1 = parseFloat(txtn1.value);
-    let op2 = parseFloat(txtn2.value);
-    let sumatotal = op1 + op2;
-    respuesta.innerText = sumatotal;
-    respuesta.style="color:red";
+    function calcular(){                                                          /* la funcion tiene que tener el mismo nombre (id) del boton para poder capturar el evento click */
+        let op1 = parseFloat(txtn1.value);                                        /* la "parseFloat() función" analiza un argumento de cadena y devuelve un número de coma flotante (admite decimales) */
+        let op2 = parseFloat(txtn2.value);                                        /* el método "parseFloat()"" analiza un valor como una cadena que tiene varios numeros y devuelve el primer número */
+        let sumatotal = op1 + op2;
+        respuesta.innerText = sumatotal;                                          /* la propiedad "innerText" establece o devuelve el contenido de texto de un elemento */
+        respuesta.style="color:red";                                              /* prueba dar estilo desde JS */
 };
+
+
+
+    
