@@ -1,0 +1,163 @@
+
+* {                                       /* formateamos nuestra pagina, sacamos los espaciados invisibles con un selector global */
+    padding: 0;                           /* quitamos todo para que todas las medidas sean iguales */
+    margin: 0;
+    box-sizing: border-box;               /* lo pegamos al borde */
+    font-family: sans-serif;
+}
+
+body {                                                               /* color de fondo de la calculadora */
+    background: linear-gradient(45deg, #f06291, #fffde7);        /* color gradiente con 2 colores */
+}
+
+.container {                              /* para centrar todoen el "div" declarado */
+    height: 100vh;                        /* para que ocupe el 100% del alto de la pantalla */
+    width: 100vh;                         /* para que ocupe el 100% del ancho de la pantalla */
+    display: flex;                        /* al contenedor le aplicamos la propiedad de que todos los elementos que contengan sean flexibles en su posicion, mejorando su capacidad de alineacion */
+    align-items: center;                  /* en un contenedor flexbox los elementos se alinean en el eje transversal, que es vertical de forma predeterminada (opuesto a la dirección flexible) */
+    justify-content: center;              /* la propiedad "justify-content" alinea los elementos del contenedor flexible cuando los elementos no utilizan todo el espacio disponible en el eje principal (horizontalmente) */
+    flex-wrap: wrap;                      /* para que se comporte de forma automatica (responsive) con los distintos formatos, sea celular o escritorio */
+}
+
+.calculator {                             /* "calculator" es el padre de todos los elementos que se contienen en su "div", contiene a todos los botones */
+    position: relative;                   /* tiene una posicion relativa porque es "padre" */
+    height: auto;
+    width: auto;
+    padding: 20px;                        /* como el "padre" esta centrado, le damos un relleño que vaya hacia adentro */
+    border-radius: 10px;                  /* para darle curvatura */
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgb(187, 130, 130);        /* La propiedad "box-shadow" permite proyectar una sombra difuminada desde el marco de casi cualquier elemento */
+    /* "la caja de la sombra" se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento */
+}
+
+.dark {                                    /* para el estilo en modo "dark" cuando se pulsa el "toggler" */
+    background-color: #1b1b1b;
+}
+    
+.dark .btn-number {                        /* se enumeran todos los elementos que son afectados por el estilo en modo "dark" */
+        background-color: #ebc909;
+        color: #000;
+        font-weight: 600;
+}
+
+.dark .btn-operator {
+        background-color: #15c524;
+        color: #aa00a4;
+}
+    
+.dark #display {
+        color: #f8fafb;
+}
+
+.dark #clear {
+        background-color: #4c35aa;
+        color: #ffffff;
+}
+
+.dark #equal {
+        background-color: #f23b00;
+        color: #ffffff;
+} 
+
+
+#display {                                /* se antepone el simbolo numeral porque es un "id", es el hijo de "calculator" */
+    color: #000000;                     /* "display" es la ventana que va a mostrar todas las operaciones */
+    margin: 0 10px;                       /* margen de arriba-abajo es "0" y de izquierda a derecha "10px" */
+    height: 120px;
+    width: auto;
+    display: flex;                        /* para que sea "responsive" */
+    align-items: flex-end;                /* que sus items se vallan a la parte de abajo, ordena los elementos de arriba a abajo */
+    justify-content: flex-end;            /* que justifique de izquierda a derecha, que lo lleve al final a la derecha */
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;                     /* ancho de la letra */
+}
+
+#clear {                                  /* boton "clear"*/
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.btn-number {                              /* para todos los botones con la clase "btn-number" */
+    background-color: #c3eaff;
+    color: #000;
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: all 200ms ease; 
+}
+
+.btn-number:hover {
+    transform: scale(1.1);
+}
+
+.btn-operator {
+    background-color: #ffd0fb;
+    color: #c415be;
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: all 200ms ease; 
+}
+
+.btn-operator:hover {
+    transform: scale(1.1);
+}
+
+#equal {
+    background-color: #adf9e7;
+    color: #000;
+    height: 130px;                             /* con esta altura toma las dos filas de botones */                  
+    width: 60px;
+    border: 0;
+    border-radius: 30px;                       /* toma como valor la mitad del ancho */
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+#equal:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggler {
+    position: absolute;                         /* le damos posicion "absolute" porque su padre es "relativo" */
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;    
+} 
+
+.theme-toggler::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+    
+} 
+
+.active {
+    color: #333;
+} 
+
+.active::before {
+    background-color: #fff;
+} 
+
+
+
